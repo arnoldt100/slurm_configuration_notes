@@ -16,6 +16,8 @@ start_cluster() {
                --pid-file="$MUNGE_DIR/var/run/munged.pid" \
                --log-file="$MUNGE_DIR/var/log/munged.log" \
                --key-file="$MUNGE_DIR/etc/munge.key"
+	       --seed-dir="${MUNGE_DIR}/var/lib" \
+               --state-dir="${MUNGE_DIR}/var/lib" 
                
         # Give it a brief instant to establish its socket interface
         sleep 1
